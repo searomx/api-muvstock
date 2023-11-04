@@ -5,10 +5,9 @@ interface ICnpj {
   cnpj: string;
 }
 
-export const create = async (req: Request<{}, {}, ICnpj>, res: Response) => {
+export const createCnpj = async (req: Request<{}, {}, ICnpj>, res: Response) => {
   const result = req.body;
   console.log(req.body);
-
 
   return res.status(StatusCodes.CREATED).json(result);
 };
